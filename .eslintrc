@@ -4,7 +4,9 @@
     "plugin:import/errors",
     "plugin:import/warnings"
   ],
-  "plugins": [],
+  "plugins": [
+    "chai-friendly"
+  ],
   "parserOptions": {
     "ecmaVersion": 6,
     "sourceType": "module",

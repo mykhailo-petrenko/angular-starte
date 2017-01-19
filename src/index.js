@@ -1,6 +1,6 @@
 import angular from 'angular';
 import App from './components/app';
 
-angular.module('AngularStarterApp', [App.name]);
+import './stylesheets/app.scss';
 
-angular.bootstrap(window.document, ['AngularStarterApp']);
+angular.module('AngularStarterApp', [App.name]);

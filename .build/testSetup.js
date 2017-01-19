@@ -49,6 +49,3 @@ global.navigator = {
 };
 
 documentRef = document;  //eslint-disable-line no-undef  
-
-// Load expect function 
-global.expect = require('chai').expect;
