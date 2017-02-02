@@ -1,6 +1,7 @@
+import template from './appView.html'; // eslint-disable-line
 
 const appComponent = {
-    template: '<ui-view></ui-view>'
+    templateUrl: template
 };
 
 export default appComponent;

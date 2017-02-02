@@ -5,7 +5,8 @@
     "plugin:import/warnings"
   ],
   "plugins": [
-    "chai-friendly"
+    "chai-friendly",
+    "import"
   ],
   "parserOptions": {
     "ecmaVersion": 6,

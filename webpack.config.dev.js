@@ -34,8 +34,8 @@ export default {
   ],
   module: {
     loaders: [
+      {test: /\.html$/, exclude: path.join(__dirname, "/src/index.html"), loaders: ['ngtemplate?relativeTo=src/', 'html']},
       {test: /\.js$/, include: path.join(__dirname, 'src'), loaders: ['babel']},
-      // {test: /(\.scss)$/, exclude: /node_modules/, loaders: ['raw-loader', 'sass-loader']},
       {test: /(\.css|\.scss)$/, loaders: ['style', 'css?sourceMap', 'sass?sourceMap']},
       {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: "file"},
       {test: /\.(woff|woff2)$/, loader: "url?prefix=font/&limit=5000"},
