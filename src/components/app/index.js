@@ -1,5 +1,4 @@
-import angular from 'angular';
-import appDirective from './appDirective';
+import appComponent from './appComponent';
 
 export default angular.module('AngularStarterApp.app', [])
-    .directive('app', appDirective);
+    .component('app', appComponent);

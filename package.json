@@ -12,19 +12,20 @@
     "lint:watch": "npm run lint -- --watch",
     "test": "mocha --reporter progress .build/testSetup \"src/**/*.spec.js\"",
     "test:watch": "npm run test -- --watch",
-    "remove-dist": "rimraf ./dist",
-    "clean-dist": "npm run remove-dist && mkdir dist",
-    "prebuild": "npm run clean-dist && npm run lint && npm run test",
+    "remove:dist": "rimraf ./dist",
+    "clean": "npm run remove:dist && mkdir dist",
+    "prebuild": "npm run clean && npm run lint && npm run test",
     "build": "babel-node .build/build.js && npm run open:dist"
   },
   "author": "Mykhailo Petrenko",
   "repository": "https://github.com/mykhailo-petrenko/angular-starter.git",
   "license": "MIT",
   "dependencies": {
+    "angular": "",
+    "angular-ui-router": "^0.4.2",
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
     "jquery": "2.2.3",
-    "angular": "",
     "toastr": "2.1.2"
   },
   "devDependencies": {
