@@ -3,10 +3,11 @@ import webpack from 'webpack';
 import path from 'path';
 import config from '../webpack.config.dev';
 import open from 'open';
+import getOption from './utils/getConfigOption';
 
 /* eslint-disable no-console */
 
-const port = 3000;
+const port = getOption('port') || 3000;
 const app = express();
 const compiler = webpack(config);
 
