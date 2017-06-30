@@ -1,4 +1,4 @@
-import template from './appView.html'; // eslint-disable-line
+import template from './appView.html';
 
 const appComponent = {
     templateUrl: template
