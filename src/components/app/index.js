@@ -1,5 +1,10 @@
 import angular from 'angular';
-import appComponent from './appComponent';
+import templateUrl from './app.html';
 
-export default angular.module('AngularStarterApp.app', [])
-    .component('app', appComponent);
+const module = angular
+    .module('AngularJSStarter.App', [])
+    .component('app', {
+        templateUrl
+    });
+
+export default module.name;

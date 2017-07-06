@@ -1,7 +1,11 @@
 import angular from 'angular';
 
-export default angular
-    .module('AngularStarterApp.home', [])
+import templateUrl from './Home.html';
+
+const module = angular
+    .module('AngularJSStarter.Home', [])
     .component('home', {
-        template: 'Im Home Page'
+        templateUrl
     });
+
+export default module.name;
