@@ -1,5 +1,6 @@
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const path = require('path');
 
 const isProduction = (process.env.NODE_ENV=='production');
@@ -10,7 +11,7 @@ const webpackConfig = function(env) {
     const isProduction = env.production;
 
     return {
-        devtool: 'cheap-eval-source-map',
+        devtool: !isProduction && 'cheap-eval-source-map',
         entry: [
             path.join(__dirname, 'src/app')
         ],
@@ -32,7 +33,13 @@ const webpackConfig = function(env) {
             }),
             new webpack.optimize.UglifyJsPlugin({
                 compress: isProduction
-            })
+            }),
+            new CopyWebpackPlugin([
+                {
+                    from: path.join(__dirname, 'src/static'),
+                    to: 'static'
+                }
+            ])
         ],
         module: {
             loaders: [
