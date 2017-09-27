@@ -1,9 +1,7 @@
 {
+  "parser": "babel-eslint",
   "extends": [
     "eslint:recommended"
-    // @TODO: resolve issue with eslint errors/warnings for `impot template 'view.html'`
-    // "plugin:import/errors",
-    // "plugin:import/warnings"
   ],
   "plugins": [
     "chai-friendly",
