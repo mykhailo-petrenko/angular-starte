@@ -1,6 +1,6 @@
 import angular from 'angular';
 
-import templateUrl from './Home.html';
+import templateUrl from './home.html';
 
 const module = angular
     .module('AngularJSStarter.Home', [])
